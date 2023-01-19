@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover - Pseudo-classes</title>
+
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            }
+        /* para esconder o texto da div
+        uma representação de chil (paragrago filho(>p) */
+        div >p {
+            display: none
+        }
+        /* para mostrar o texto da div
+        utiliza a pseudo classe hover*/
+        div:hover > p {
+            display: block;
+            width: 400px;
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Exemplo de hover</h1>
+    <p>passe sobre o texto abaixo</p>
+    <div>
+        passe o mouse aqui!
+
+       <p> TEXTO ESCONDIDO</p>
+    </div> 
+    <p>fim do exemplo</p>   
+</body>
+</html>

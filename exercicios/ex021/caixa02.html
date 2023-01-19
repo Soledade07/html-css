@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags (grupos de agrupamento)</title>
+
+    <style>
+        header {
+            background-color: rgb(60, 156, 60);
+            padding: 10px;
+            margin: 10px;
+        }
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgb(151, 116, 51);
+            margin: 10px;
+        }
+        main {
+            background-color: rgb(57, 189, 57);
+            padding: 10px;
+            margin: 10px;
+        }
+        article {
+            background-color: rgb(63, 161, 161);
+        }
+        article >aside {
+            background-color: blue;
+            color: white;
+        }
+        nav {
+            background-color:rgb(29, 156, 114);
+            padding: 5px;
+            box-shadow: 5px 3px 7px 1px black; 
+        }
+        nav >a {
+            color: white;
+            font-weight: bold;
+            margin: 30px;
+            text-decoration: none;
+            box-shadow: 3px 3px 3px black;
+            /*ou margin-right: 30; somente entre eles, não fica no início. */
+        }    
+        nav >a:hover {   /*indica o estado do campo quando o mouse passa por cima */
+            text-decoration: underline;   /*só fica underline quando o mouse passa por cima */
+        } 
+        section#mundo {
+            background-color: aqua;
+        }
+
+        footer {
+            background-color: black;
+            color:white;
+            text-align: center;
+            margin: 0px;
+            padding: 1px;
+        }
+        footer >p{
+            margin:0px;
+        }
+
+        div#bola {
+            height: 100px;
+            width: 100px;
+            background-color: green;
+            margin: 10px;
+            border-radius: 50%;
+        }
+/* também funciona
+        p#bola {
+            height: 100px;
+            width: 100px;
+            background-color: green;
+            margin: 10px;
+            border-radius: 50%;
+        } */
+</style>
+
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+
+        </nav>
+    </header>    
+
+    <main>
+        <section id="mundo" >
+            <p>Notícias internacionais</p>
+        </section>
+        <section id="brasil">
+            <h2>Notícias do Brasil</h2>
+            <article>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore neque tempore nihil quibusdam labore ex dignissimos? Eum id aliquam quidem sed obcaecati doloribus blanditiis vero, doloremque natus similique, incidunt quo?</p>
+                <aside>
+                    <p>Artigo escrito por José da Silva</p>
+                </aside>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por curso em vídeo</p>
+    </footer>
+    <div id="bola"></div>
+</body>
+</html>

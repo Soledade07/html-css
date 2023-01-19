@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação de textos</title>
+   
+    <!--css usado para trocar as cores de todas as tags mark para a mesma cor-->
+   <style>
+        mark {
+            background-color: green;
+        }
+    </style>
+
+
+</head>
+<body>
+    <h1>Principais formatações</h1>
+    <h2>Negrito (destaque)</h2>
+    <p>Nesta frase temos um <b> termo em negrito. Usando a tab B</b></p>
+    <p>Nesta frase, tenho um <strong> termo em destaque </strong></p>
+    <h2>Termo em itálico</h2>
+    <p>Nesta frase temos um <i>xtermo em itálico</i> usando I (não semântica)</p>
+    <!-- <ctrl>
+    <shift> + p  seleciono o termo que eu quero grifar e digito abb seleciona wrap with abreviation + depois i -->
+    <p>Nesta frase <b>temos</b> um <i>termo em itálico</i> e negrito usando ctrl + shift + p</p>
+    <h2>Texto marcado</h2>
+    <p>podemos criar um <mark>texto marcado</mark> usando a tab mark </p>
+    <!-- para definir a cor pq cor é forma, cor não é significado é necessário usar css, simbolizado por style -->
+    <p>podemos criar um <mark style="background-color: rgb(16, 141, 141);">texto marcado</mark> usando a tag mark </p>
+    <p>e no outro parágrafo temos <mark> outro texto marcado</mark></p>
+    
+    <!--outra forma de fazer a marcação para todos os parágrafor ao inves de fazer individual é usar o style no cabecalho (head), deixará todas as tags mark com a mesma cor caso eu tenha uma tag mark de cada cor-->
+
+    <h2>texto grande e pequeno</h2>
+    <p>Estamos criando um <big> texto grande</big> e um <small> texto pequeno</small></p>
+    <h2>texto deletado</h2>
+    <p>podemos marcar um <del> texto deletado</del> para indicar que ele não deve ser considerado (lei revogada)</p>
+    <h2>texto inserido</h2>
+    <p>podemos marcar um <ins> texto como inserido</ins> para indicar que antes ele não existia e agora deve ser considerado</p>
+    existe também o <u>sublinhado</u> com a tag U.
+      <h2>texto sobrescrito</h2>
+    <p>para inserir "coisas" acima da letra ex: x<sup>20</sup>+3</p>
+     <h2>texto subrescrito</h2>
+     <p>ou para inserir "coisas" abaixo da letra ex: H<sub>2</sub>O</p>
+    </body>
+</html>

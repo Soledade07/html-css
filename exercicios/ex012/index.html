@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos em HTML5</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>opção 1.</p>
+
+    <!--esta é a forma mais simples e tradicional contudo pode existir problema de compatibilidade de navegador que não roda determinados tipos de video, por isso é importante vc utilizar a opção 2-->
+    <!--nesse ex. reproduz os 3 videos-->
+    <video src="midia/meu-video-1.mp4" width="500" controls></video>
+    <video src="midia/Meu-Video-1.webm" width="500" controls></video>
+    <video src="midia/Meu-Video-convertido-720.mp4" width="500" controls></video>
+
+    <!--nesse caso ele reproduz condicionalmente, se não conseguir o primeiro, vai para o segundo e assim por diante-->
+    <p> opção 2</p>
+    <video width=500 controls>
+        <source src="midia/meu-video-1.mp4" type="video/mp4">
+        <source src="midia/Meu-Video-1.webm" type="video/webm">
+        <source src="midia/Meu-Video-convertido-720.mp4" type="video/mp4">
+
+        <p>seu navegador não tem compatibilidade com reprodução de video.</p>
+    </video>
+
+    <h1>Inserindo vídeos do youtube</h1>
+        <!--seleciona o video no youtube, seleciona compartilhar
+        e incorporar. copia o código e cola na sua página-->
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Bas5Z9_tr-Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</body>
+</html>

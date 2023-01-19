@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h>Usando links externos</h>
+<!--target(blank) faz com que o site abra em outra aba. o parametro rel indica que a página é externa(opcional, mas boa pratica)-->
+<p>você pode acessar o meu <a href="https://gustavoguanabara.github.io" target="_blank" rel="external">repositório público no GitHub</a></p>
+<p>você também pode acessar o meu <a href="https://youtube.com/cursoemvideo" target="_blank" rel="external">canal gratuíto no youtube</a></p>
+<h2>Usando links internos</h2> <!-- rel=next indica q ira p outra pag
+                                 e  target=_self indica q é do mesmo site, não externo (opcional)-->
+<p>esta é a primeira página do site. se você quiser acessar a minha <a href="pag002.html" rel="next" target="_self">segunda página</a></p>
+<p>você também pode acessar nossa <a href="noticias/pag003.html" rel="next" target="_self">página de notícias</a></p>
+<h2>Links para download</h2>
+<!--posso colocar como paragrafo mas posso colocar como uma lista-->
+
+<!-- no download é obrigatório utilizar a tag=download e recomendável utilizar a tag type=application/pdf que indica o tipo do arquivo q var ser baixado-->
+<ul>
+   <li><a href="livro/Lista de Fornecedores Particulares.pdf" target="_blank" download="Lista de Fornecedores Particulares.zip"> Baixa o livro em PDF</a> </li>
+   <li><a href="livro/Lista de Fornecedores Particulares.rar" target="_blank"  download="Lista de Fornecedores Particulares.rar">Baixa o livro compactado</a> </li>
+</ul>
+</body>
+</html>
