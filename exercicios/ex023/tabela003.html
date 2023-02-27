@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table { 
+            width: 500px;
+            border-collapse: collapse;
+        }
+        thead, tfoot {
+            background-color: black;
+            color: white;
+        }
+        thead >tr >th {  /* fixa o cabecalho no topo para rolagem */
+            position: sticky;  /*colado, grudado */
+            background-color: black;
+            top: -1px;
+        }
+
+        td,th {
+            border: 1px solid black;
+            padding: 10px;  
+        }
+        td.num {
+            text-align: right;
+        }
+        th.numf {
+            text-align: right ;
+        }
+        caption {
+            background-color: gray;
+            text-align: center;
+            font-size: 1.5em;
+            padding: 10px;
+        }
+/*        tbody >tr:nth-child(2n) {  ou 'odd' impar ou 'even' par ou -1 ou -2*/
+            tbody >tr:nth-child(odd) {
+            background-color: orange;
+        }
+            tbody >tr:nth-child(even) {
+            background-color: green;
+        }
+</style>
+</head>
+<body>
+    <h1>Tabelas grandes com cabeçado fixo</h1>
+    <!-- anotomia para tabelas grandes
+        TABLE
+            THEAD
+                TR, TD, TH
+            TBODY
+                TR, TD, TH
+            TFOOT
+                TR, TD, TH
+    -->
+<!--    <h3>População de alguns estados brasileiros</h3>     titulo da tabela o correto é usar caption dentro da tab table -->
+    <table>
+            <caption><strong>População de alguns estados brasileiros</strong></caption> <!-- ou bold no style-->
+        <thead>
+            <tr>
+                <th>Estado</th>
+                <th>População</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr> <!-- abrir a linha-->
+                <td>São Paulo</td>  <!--conteudo-->
+                <td class="num">45.000.000</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.000.000</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.000.000</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">12.000.000</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.000.000</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">10.000.000</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9.000.000</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">8.000.000</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">9.000.000</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">9.000.000</td>
+            </tr>
+            <td>São Paulo</td>  <!--conteudo-->
+            <td class="num">45.000.000</td>
+        </tr>
+        <tr>
+            <td>Rio de Janeiro</td>
+            <td class="num">17.000.000</td>
+        </tr>
+        <tr>
+            <td>Minas Gerais</td>
+            <td class="num">21.000.000</td>
+        </tr>
+        <tr>
+            <td>Bahia</td>
+            <td class="num">12.000.000</td>
+        </tr>
+        <tr>
+            <td>Rio Grande do Sul</td>
+            <td class="num">11.000.000</td>
+        </tr>
+        <tr>
+            <td>Paraná</td>
+            <td class="num">10.000.000</td>
+        </tr>
+        <tr>
+            <td>Pernambuco</td>
+            <td class="num">9.000.000</td>
+        </tr>
+        <tr>
+            <td>Ceará</td>
+            <td class="num">8.000.000</td>
+        </tr>
+        <tr>
+            <td>Santa Catarina</td>
+            <td class="num">9.000.000</td>
+        </tr>
+        <tr>
+            <td>Maranhão</td>
+            <td class="num">9.000.000</td>
+        </tr>
+        <td>São Paulo</td>  <!--conteudo-->
+        <td class="num">45.000.000</td>
+    </tr>
+    <tr>
+        <td>Rio de Janeiro</td>
+        <td class="num">17.000.000</td>
+    </tr>
+    <tr>
+        <td>Minas Gerais</td>
+        <td class="num">21.000.000</td>
+    </tr>
+    <tr>
+        <td>Bahia</td>
+        <td class="num">12.000.000</td>
+    </tr>
+    <tr>
+        <td>Rio Grande do Sul</td>
+        <td class="num">11.000.000</td>
+    </tr>
+    <tr>
+        <td>Paraná</td>
+        <td class="num">10.000.000</td>
+    </tr>
+    <tr>
+        <td>Pernambuco</td>
+        <td class="num">9.000.000</td>
+    </tr>
+    <tr>
+        <td>Ceará</td>
+        <td class="num">8.000.000</td>
+    </tr>
+    <tr>
+        <td>Santa Catarina</td>
+        <td class="num">9.000.000</td>
+    </tr>
+    <tr>
+        <td>Maranhão</td>
+        <td class="num">9.000.000</td>
+    </tr>
+</tbody>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <th>Total de habitantes</th>
+            <th class="numf">453.000.000</th> <!-- ou td (dado) no lugar do th. Como é um valor fixo eu posso usar th. o ideal é td.-->
+        </tr>
+    </tfoot>
+    </table>
+    <!-- para testar se o cabecalho some quando a tabela termina -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolorum, voluptatum alias cumque suscipit aut, laborum reiciendis repellat accusamus veritatis eos odit illo porro provident? Porro rerum facilis aliquid magni! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos, blanditiis corrupti aut natus, ut non a, dolorum dignissimos ullam ratione fugit ab veniam debitis incidunt aperiam. Beatae, enim quaerat.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolorum, voluptatum alias cumque suscipit aut, laborum reiciendis repellat accusamus veritatis eos odit illo porro provident? Porro rerum facilis aliquid magni! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos, blanditiis corrupti aut natus, ut non a, dolorum dignissimos ullam ratione fugit ab veniam debitis incidunt aperiam. Beatae, enim quaerat.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolorum, voluptatum alias cumque suscipit aut, laborum reiciendis repellat accusamus veritatis eos odit illo porro provident? Porro rerum facilis aliquid magni! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos, blanditiis corrupti aut natus, ut non a, dolorum dignissimos ullam ratione fugit ab veniam debitis incidunt aperiam. Beatae, enim quaerat.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolorum, voluptatum alias cumque suscipit aut, laborum reiciendis repellat accusamus veritatis eos odit illo porro provident? Porro rerum facilis aliquid magni! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos, blanditiis corrupti aut natus, ut non a, dolorum dignissimos ullam ratione fugit ab veniam debitis incidunt aperiam. Beatae, enim quaerat.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolorum, voluptatum alias cumque suscipit aut, laborum reiciendis repellat accusamus veritatis eos odit illo porro provident? Porro rerum facilis aliquid magni! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos, blanditiis corrupti aut natus, ut non a, dolorum dignissimos ullam ratione fugit ab veniam debitis incidunt aperiam. Beatae, enim quaerat.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolorum, voluptatum alias cumque suscipit aut, laborum reiciendis repellat accusamus veritatis eos odit illo porro provident? Porro rerum facilis aliquid magni! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos, blanditiis corrupti aut natus, ut non a, dolorum dignissimos ullam ratione fugit ab veniam debitis incidunt aperiam. Beatae, enim quaerat.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolorum, voluptatum alias cumque suscipit aut, laborum reiciendis repellat accusamus veritatis eos odit illo porro provident? Porro rerum facilis aliquid magni! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos, blanditiis corrupti aut natus, ut non a, dolorum dignissimos ullam ratione fugit ab veniam debitis incidunt aperiam. Beatae, enim quaerat.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolorum, voluptatum alias cumque suscipit aut, laborum reiciendis repellat accusamus veritatis eos odit illo porro provident? Porro rerum facilis aliquid magni! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos, blanditiis corrupti aut natus, ut non a, dolorum dignissimos ullam ratione fugit ab veniam debitis incidunt aperiam. Beatae, enim quaerat.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolorum, voluptatum alias cumque suscipit aut, laborum reiciendis repellat accusamus veritatis eos odit illo porro provident? Porro rerum facilis aliquid magni! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos, blanditiis corrupti aut natus, ut non a, dolorum dignissimos ullam ratione fugit ab veniam debitis incidunt aperiam. Beatae, enim quaerat.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolorum, voluptatum alias cumque suscipit aut, laborum reiciendis repellat accusamus veritatis eos odit illo porro provident? Porro rerum facilis aliquid magni! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quos, blanditiis corrupti aut natus, ut non a, dolorum dignissimos ullam ratione fugit ab veniam debitis incidunt aperiam. Beatae, enim quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit architecto adipisci sint quidem dolore atque nulla, necessitatibus optio maiores ducimus explicabo? Deserunt laborum delectus commodi unde eum quam obcaecati amet.</p>
+</body>
+</html>
