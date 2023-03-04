@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 003</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    table {
+        border-collapse: collapse;
+    }
+    caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 10px;
+        background-color: lightgray;
+        border: 1px solid black;
+    }
+    td  {
+        border: 1px solid black;
+
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 10px;
+    } 
+</style>
+<body>
+    <h1>Exercícios de tabelas</h1>
+    <table>
+        <caption>  <!-- pertence à tabela, acompanha o tamanho da tabela -->
+            Filmes Favoritos
+        </caption>
+        <!--nesse exemplo temos cabecalho de colunas.
+            quando não tem cabecalho não precisa usar thead, tbody ou tfoot 
+        pode usar direto tr=row e td=dados -->
+        <thead>
+            <tr>
+                <th scope="col">Grupos</th>   <!--indicao de cabelho e não dado (td), scope apenas para indicar a orientação que os dados do th serão colocados, ou seja, nas colunas abaixo, na pratica, scope, nesse exemplo não faz diferença alguma -->
+                <th scope="col">Nomes</th>
+                <th scope="colgroup" colspan="3" >Filmes</th>  
+            </tr>
+        </thead>
+        <tbody>
+            <tr> 
+                <th rowspan="3" scope="rowgroup">Mulheres</th>   <!--indicação que é uma coluna de titulo, não dado
+                                    até poderia usar tr, mas ai ja teria que usar uma class
+                                    para mudar o style-->
+                <td>Ana Maria dos Santos</td>
+                <td>Alien</td>
+                <td>Rambo</td>
+                <td>Vingadores</td>
+            </tr>
+            <tr>
+                <td>Beatriz Souza</td>
+                <td>Hulk</td>
+                <td>Inception</td>
+                <td>Batman</td>
+            </tr>
+            <tr>
+                <td>Claudia Melo</td>
+                <td>Oblivion</td>
+                <td>Matrix</td>
+                <td>big Hero</td>
+            </tr>
+            <tr> 
+                <th rowspan="3" scope="rowgroup">Homens</th>   <!--indicação que é uma coluna de titulo, não dado
+                                    até poderia usar tr, mas ai ja teria que usar uma class
+                                    para mudar o style-->
+                <td>Bruno Mendonça</td>
+                <td>Intocáveis</td>
+                <td>Amnésia</td>
+                <td>Gladiador</td>
+            </tr>
+            <tr>
+                <td>Daniel Lourenço</td>
+                <td>Wall-E</td>
+                <td>OldBoy</td>
+                <td>Dangal</td>
+            </tr>
+            <tr>
+                <td>Fabia Mota</td>
+                <td>star Wars 5</td>
+                <td>Taxi Driver</td>
+                <td>Toy Story</td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+</html>
