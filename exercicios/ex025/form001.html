@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Meu primeiro formuário</h1>
+    <!-- get é o metodo padrão do formulario, se não informar esse é o padrao, esse metodo mostra os dados enviados na Url -->
+    <!-- o metodo que não aparece na url é metodo POST -->
+    <form action="cadastro.php" method="post" autocomplete="off">
+        <p><label for="id_nome">Nome:</label> <input type="text" name="nome" id="id_nome"> </p>
+        <p><label for="id_sobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="id_sobrenome"></p>
+        <p><input type="submit" value="Enviar"></p>
+        <!-- <p><input type="button" value="Enviar"></p>   não funciona com button-->
+    </form>
+</body>
+</html>
