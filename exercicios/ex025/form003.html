@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outro formulário com números</title>
+    <title>Formulário 3</title>
 </head>
 <body>
+    <h1>Formulário de data e número</h1>
     <form action="cadastro.php" autocomplete="off">
         <p>
             <label for=id_nome">Nome</label>
-            <input type="text" name="" id="id_nome" required maxlength="40" minlength="4">
+            <input type="text" name="nome" id="id_nome" required maxlength="40" minlength="4">
         </p>
         <p>
             <label for="id_nota">Nota</label>
-            <input type="number" name="" id="id_nota" min="0" max="10" step="0.1" required>  <!-- step indica qual fraçao entre os numeros pode crescer, por. ex. 5,6, 4,3  7.5-->
+            <input type="number" name="nota" id="id_nota" min="0" max="10" step="0.1" required>  <!-- step indica qual fraçao entre os numeros pode crescer, por. ex. 5,6, 4,3  7.5-->
         </p>
         <p>
             <label for="id_periodo">Periodo letivo</label>
-            <input type="month" name="" id="id_periodo"  required> <!--posso colocar igual VB text pronto com a tag ex.: "value=2023-03" ou a data atual -->
+            <input type="month" name="periodo" id="id_periodo"  required> <!--posso colocar igual VB text pronto com a tag ex.: "value=2023-03" ou a data atual -->
         </p>
         <p>
             <label for="id_dtprova">Data da prova de recuperação</label>
-            <input type="date" name="" id="id_dtprova" required>
+            <input type="date" name="dtprova" id="id_dtprova" required>
         </p>
         <p>
             <label for="id_hrprova">Horário da prova</label>
-            <input type="time" name="" id="id_hrprova">
+            <input type="time" name="hrprova" id="id_hrprova">
         </p>
         <p>
             <input type="submit" value="Enviar">

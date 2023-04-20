@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 6</title>
+</head>
+<body>
+    <h1>Outro Formulário</h1> <!-- get é padrão, mostra as informações na barra de endeço, para esconder é post. -->
+    <!-- o metodo get tem limitação de 3000bytes entao, para enviar fotos
+    tem que utilizar o metodo post -->
+    <form action="cadastro2.php" method="POST">  <!-- para enviar arquivos-->
+
+    <!-- <form action="cadastro.php" method="get"> -->
+            <p>
+            <!-- seletor de cores -->
+            <label for="id_cor">Selecione uma cor</label>
+            <input type="color" name="cor" id="id_cor">
+        </p>
+
+        <p>
+            <label for="id_Nivelsat">Nível de satisfação:</label>
+            <input type="range" name="nivelsat" id="id_nivelsat" min="1" max="10" value="1">
+            <!-- da para colocar as tags "min" e "max" indicando o minimo e maximo de deslocamento da barra de progresso ex.: min=1 max=10 -->
+            <!-- da para colocar uma posição padrão que o controle inicia ex: na posição 2, 3, "value=1" ou "value=2" -->
+        </p>
+        <p>
+            <label for="id_file">Selecione um arquivo:</label>
+            <input type="file" name="file2" id="id_file">
+        </p>
+        <p>
+            <br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

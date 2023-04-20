@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com javascript</title>
+</head>
+<body>
+    <h1>Formários com comando javascript</h1>
+    <h2>"Output" exemplo 1</h2>
+
+    <form action="cadastro2.php" method="get">
+        <p>
+            <label for="id_num1">Digite um número:</label>
+            <input type="number" name="num1" id="id_num1" required min="1" max="50"
+            oninput="id_soma.innerHTML=Number(id_num1.value) + Number(id_num2.value)">
+        </p>
+        <p>
+            <!-- <br> <br> faz diferença, tem q ficar em paragrafos diferentes-->
+            <!-- usei o br, mas poderia ter usado o <p> da no mesmo  -->
+            <label for="id_num2">Digite um número:</label>
+            <input type="number" name="num2" id="id_num2" required min="1" max="50"
+            oninput="id_soma.innerHTML=Number(id_num1.value) + Number(id_num2.value)">
+             <!-- <br> <br> faz diferença, tem q ficar em paragrafos diferentes-->
+             <!-- o output não é enviado pelo metoco POST ou get
+            só serve para mostrar alguma coisa para o usuario -->
+                <label for="id_soma">Soma:</label>
+                <output id="id_soma">0</output>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>  
+</body>
+</html>

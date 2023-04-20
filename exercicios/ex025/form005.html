@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 5</title>
+</head>
+<body>
+    <form action="cadastro.php" method="get">
+        <fieldset>
+            <!-- quando for radio, o segredo esta no "name" todos tem q ser igual, equivalente no vb do "groupselect onlyone", neste caso
+            não deixa marcar mais de um -->
+            <legend>Gênero</legend>
+            <input type="radio" name="genero" id="id_masc" value="F" checked>  <!--posso usar "checked" no input para deixar um campo como padrao marcado-->
+            <label for="id_masc">Masculino</label>
+            <input type="radio" name="genero" id="id_fem" value="M">
+            <label for="id_fem">Feminino</label>
+            <input type="radio" name="genero" id="id_out" value="O">
+            <label for="id_out">Outros</label>
+
+        </fieldset>
+        <br>
+        <fieldset>
+            <!-- ja no checkbox os id tem q ser diferentes -->
+            <legend>Esportes favoritos</legend>
+
+            <input type="checkbox" name="basq" id="id_basq">
+            <label for="id_basq">Basquete</label>
+            <input type="checkbox" name="fut" id="id_fut">
+            <label for="id_fut">Futebol</label>
+            <input type="checkbox" name="nat" id="id_nat">
+            <label for="id_nat">Futebol</label>
+            <input type="checkbox" name="tenis" id="id_tenis">
+            <label for="id_tenis">Tênis</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Esportes favoritos</legend>
+
+            <input type="checkbox" name="basq2" id="id_basq2">
+            <label for="id_basq2">Basquete</label><br>
+            <input type="checkbox" name="fut2" id="id_fut2">
+            <label for="id_fut2">Futebol</label><br>
+            <input type="checkbox" name="nat2" id="id_nat2">
+            <label for="id_nat2">Futebol</label><br>
+            <input type="checkbox" name="tenis2" id="id_tenis2">
+            <label for="id_tenis2">Tênis</label>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">            
+        </p>
+
+    </form>    
+
+</body>
+</html>

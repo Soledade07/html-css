@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com javascript</title>
+</head>
+<body>
+
+    <h1>Formulários com comando javascript</h1>
+    <h2>"output" exemplo 2</h2>
+    <form action="cadastro2.php" method="get">
+        <p>
+            <!-- por padrão o tamanho do range é 100, com os comandos min e max esse tamanho pode ser alterado -->
+            <!-- posso usar o value para deixar um valor como padrao: value="5" -->
+            <label for="id_intervalo">Selecione o intervalo</label>
+            <input type="range" name="intevalor" id="id_intervalo" min="1" max="5"
+            oninput="valorescolhido.innerHTML=Number(id_intervalo.value)">
+        
+            <label for="valorescolhido">Valor:</label>
+            <output id="valorescolhido"></output>
+        
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form> 
+</body>
+</html>

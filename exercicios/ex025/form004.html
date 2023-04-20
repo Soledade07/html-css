@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 4</title>
+</head>
+<body>
+    <h1>Formulário de e-mail e telefone</h1>
+    <!-- da para colocar os campos abaixo dentro de um frame se quiser como no vb -->
+    <!-- nesse caso vc deve usar a tag fildset atraves do envelopamento ctrl shift p, somente nos campos não no form-->
+    <!-- vair criar um borda como um frame inclusive da para colocar o nome desse frame, posteriormento pode formatar com CSS -->
+
+    <form action="cadastro.php" method="get">
+        <fieldset>   <!--FRAME DO VB -->
+            <legend>Dados pessoais</legend>
+            <p>
+                <label for="id_nome">Nome:</label>
+                <input type="text" name="nome" id="id_nome" required maxlength="40">
+            </p>
+            <p>
+                <label for="id_email">E-mail:</label>
+                <input type="email" name="email" id="id_email" required>
+            </p>
+            <p>
+                <label for="id_fone">Telefone:</label>
+                <input type="tel" name="fone" id="id_fone"
+                pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required>
+            </p>
+            <!-- estudar sobre html regex padrões ex: html5 telefone pattern -->
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">            
+        </p>
+    </form>
+</body>
+</html>

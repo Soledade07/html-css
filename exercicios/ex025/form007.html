@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário outros controles (elementos)</title>
+</head>
+<body>
+    <h1>Formários - outros elementos (controles)</h1>
+    <form action="cadastro2.php" method="get">
+        <h2>elemento select (controle)</h2>
+        <p>
+            <label for="id_cdestado">Estados SEM separação por grupo:</label>
+            <!--"value" é o valor que vai ser passado pelo metodo get/post -->
+            <select name="estado" id="id_cdestado">
+                <option value="0">-- selecione um estado --</option>
+                <option value="1">Minas Gerais</option>
+                <option value="2">Rio de Janeiro</option>
+                <option value="3">São Paulo</option>
+
+                <option value="4">Rio Grande do Norte</option>
+                <option value="5">Pernambuco</option>
+                <option value="6">maranhão</option>
+            </select>
+        </p>
+
+        <p>
+        <!--para separar por grupo utiliza-se o metodo "optgroup" ctrl shift p -->
+            <label for="id_cdestado2">Estados COM separação por grupo:</label>
+            <!--"value" é o valor que vai ser passado pelo metodo get/post -->
+            <select name="estado2" id="id_cdestado2">
+                <option value="0">-- selecione um estado --</option>
+                <optgroup label="Região sudeste">
+                    <option value="7">Minas Gerais</option>
+                    <option value="8">Rio de Janeiro</option>
+                    <option value="9">São Paulo</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="10">Rio Grande do Norte</option>
+                    <option value="11">Pernambuco</option>
+                    <option value="12">maranhão</option>
+                </optgroup>
+            </select>
+        </p>
+<!-- existe outra forma de listar dados, através do datalist
+esse controle possibilita ao usuário que digite novos valores a lista -->
+<!-- para isso é necessário criar um controle do tipo input text para o 
+usuario, além de listar, poder digitar novo valor -->
+        <P>
+            <label for="id_prof">Profissão:</label>
+            <input type="text" name="prof" id="id_prof" list="listprof">
+            <!-- primeiro monto uma lista normal como nos controles anterioes através do option-->
+            <!-- depois coloco essa lista dentro de um datalist para ir para dentro do controle input, sem isso fica fora,
+            depois coloco o id do datalist no input, para fazer a ligação -->
+            <datalist id="listprof">
+                <!-- <option >Desenvolvedor</option>
+                <option >Analista de Sistemas</option>
+                <option >Advogado</option> -->
+
+                <!-- value é o valor que será passado pelo metodo get/post
+                por isso, é importando deixar value -->
+                <option value="1">Desenvolvedor</option>
+                <option value="2">Analista de Sistemas</option>
+                <option value="3">Advogado</option>
+            </datalist>
+
+        </P>
+            <!-- outro elemento é textarea que é uma controle para o usuario
+            digitar uma mensagem qualquer, não limite de tamanho, por isso
+            deve ser usado o metodo POST, get tem limite de 3000bytes-->
+            <label for="id_msg">Mensagem:</label> <br>
+            <textarea name="msg" id="id_msg" cols="30" rows="10"></textarea>
+        <P>
+
+        </P>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+   
+
+
+
+
+    </form>
+</body>
+</html>
