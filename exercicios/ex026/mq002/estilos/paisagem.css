@@ -1,1 +1,9 @@
 @charset "UTF-8";
+
+/* telas paisagem, exemplo quando vira o celular na horizontal */
+
+body {
+    /* background-color: green; */
+    background-image: url(../imagens/cev-landscape.jpg);
+
+}
